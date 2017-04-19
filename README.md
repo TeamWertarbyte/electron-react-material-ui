@@ -1,4 +1,6 @@
 # electron-react-material-ui
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/TeamWertarbyte/electron-react-material-ui.svg)](https://greenkeeper.io/)
 Quick boilerplate for an electron react app with material ui
 
 Very much like the [electron react biolerplate](https://github.com/chentsulin/electron-react-boilerplate) so big credits!
