@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #fafafa;
+}
+
+#react-target {
+    height: 100%;
+}
+
+label {
+    pointer-events: none !important; // fix issues with SelectFields not being selectable by clicking on the label
+}
+
+input:invalid {
+    box-shadow: none; // remove shadow on required input fields in firefox
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+// remove yellow highlighting for autofilled fields in chrome
+background-color: #FFFFFF !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
