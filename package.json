@@ -93,6 +93,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-dev-expression": "^0.2.1",
     "babel-plugin-flow-runtime": "^0.10.0",
+    "babel-plugin-material-ui": "^0.3.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-es2015-classes": "^6.23.0",
     "babel-polyfill": "^6.23.0",
