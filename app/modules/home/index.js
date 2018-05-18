@@ -1,5 +1,7 @@
+import { createModule } from '../../ModuleBundler'
 import routes from './routes'
 
-export {
-  routes
-}
+const module = createModule('home')
+module.routes = routes
+
+export default module

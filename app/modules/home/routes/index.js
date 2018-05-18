@@ -1,10 +1,9 @@
+import React from 'react'
+import { Route } from 'react-router-dom'
 import Home from '../containers/Home'
 
-export default (store) => {
-  return {
-    path: '/',
-    component: {
-      content: Home
-    }
-  }
+export default () => {
+  return (
+    <Route path='/' component={Home} />
+  )
 }

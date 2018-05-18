@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import MySnackbar from '../containers/MySnackbar'
 import Header from '../containers/Header'
 
 export default class Application extends Component {
   render () {
+    const {
+      children
+    } = this.props
+
     return (
       <div>
         <Header />
-        {this.props.content}
+        {children}
         <MySnackbar />
       </div>
     )
   }
-}
-
-Application.propTypes = {
-  content: PropTypes.node.isRequired
 }
