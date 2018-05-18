@@ -83,8 +83,6 @@
     }
   },
   "devDependencies": {
-    "@material-ui/core": "^1.0.0",
-    "@material-ui/icons": "^1.0.0",
     "asar": "^0.13.0",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
@@ -117,7 +115,7 @@
     "electron-builder": "^16.6.0",
     "electron-chromedriver": "^1.6.0",
     "electron-devtools-installer": "^2.1.0",
-    "enzyme": "^2.8.0",
+    "enzyme": "^3.3.0",
     "express": "^4.15.2",
     "fbjs-scripts": "^0.7.1",
     "file-loader": "^0.11.0",
@@ -142,16 +140,19 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
+    "@material-ui/icons": "^1.0.0",
     "electron-debug": "^1.1.0",
     "extract-text-webpack-plugin": "^2.0.0",
     "font-awesome": "^4.7.0",
+    "history": "^4.7.2",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-hot-loader": "3.0.0-beta.6",
-    "react-redux": "^5.0.2",
-    "react-router": "^3.0.2",
-    "react-router-redux": "^4.0.8",
+    "react-hot-loader": "^4.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "source-map-support": "^0.4.10"
