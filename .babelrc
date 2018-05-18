@@ -15,7 +15,7 @@
   ],
   "plugins": [
     "add-module-exports",
-    "material-ui"
+    ["direct-import", ["@material-ui/core", "@material-ui/icons"]]
   ],
   "env": {
     "production": {

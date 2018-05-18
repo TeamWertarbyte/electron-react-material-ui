@@ -3,14 +3,12 @@ import { render } from 'react-dom'
 import { hashHistory } from 'react-router'
 import { AppContainer } from 'react-hot-loader'
 import { syncHistoryWithStore } from 'react-router-redux'
-import reactTapEventPlugin from 'react-tap-event-plugin'
 import Root from './Root'
 import configureStore from './store/configureStore'
 import './app.global.less'
 
 const store = configureStore()
 const history = syncHistoryWithStore(hashHistory, store)
-reactTapEventPlugin()
 
 render(
   <AppContainer>
