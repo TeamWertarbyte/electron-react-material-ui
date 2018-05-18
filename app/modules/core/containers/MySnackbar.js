@@ -8,7 +8,7 @@ class Container extends Component {
     super(props)
   }
 
-  onRequestClose () {
+  onClose () {
     this.props.dispatch(toggleSnackbar())
   }
 
@@ -16,7 +16,7 @@ class Container extends Component {
     return (
       <MySnackbar
         message={this.props.message}
-        onRequestClose={() => this.onRequestClose()}
+        onClose={() => this.onClose()}
         open={this.props.open}
       />
     )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Snackbar } from 'material-ui'
+import Snackbar from '@material-ui/core/Snackbar'
 
 export default class MySnackbar extends Component {
   render () {
@@ -9,7 +9,7 @@ export default class MySnackbar extends Component {
         open={this.props.open}
         message={this.props.message}
         autoHideDuration={3000}
-        onRequestClose={this.props.onRequestClose}
+        onClose={this.props.onClose}
       />
     )
   }
@@ -17,6 +17,6 @@ export default class MySnackbar extends Component {
 
 MySnackbar.propTypes = {
   message: PropTypes.string.isRequired,
-  onRequestClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired
 }

@@ -1,43 +1,41 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { FlatButton } from 'material-ui'
-import Text from './Text'
-import * as colors from 'material-ui/styles/colors'
+import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
+import blue from '@material-ui/core/colors/blue'
+import MenuIcon from '@material-ui/icons/Menu'
+import { withStyles } from '@material-ui/core/styles'
 
 const styles = {
-  root: {
-    height: 75,
-    backgroundColor: colors.blueGrey700,
-    display: 'flex',
-    alignItems: 'center',
-    padding: '0 21px',
-    zIndex: 10
-  },
   title: {
-    flex: '1 auto',
-    color: colors.white
+    flex: '1 auto'
   },
-  button: {
-    color: colors.white,
-    height: '100%'
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
   }
 }
 
-export default class Header extends Component {
+class Header extends Component {
   render () {
     const {
+      classes,
       onRequestRouteChange
     } = this.props
 
     return (
-      <div style={styles.root}>
-        <Text type="headline" style={styles.title}>
-          My App
-        </Text>
-        <FlatButton label="Menu1" onTouchTap={() => onRequestRouteChange('/1')} style={styles.button} />
-        <FlatButton label="Menu2" onTouchTap={() => onRequestRouteChange('/2')} style={styles.button} />
-        <FlatButton label="Menu3" onTouchTap={() => onRequestRouteChange('/3')} style={styles.button} />
-      </div>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="title" color="inherit" className={classes.title}>
+            My App
+          </Typography>
+          <Button color='inherit' onClick={() => onRequestRouteChange('/1')}>Menu1</Button>
+          <Button color='inherit' onClick={() => onRequestRouteChange('/2')}>Menu2</Button>
+          <Button color='inherit' onClick={() => onRequestRouteChange('/3')}>Menu3</Button>
+        </Toolbar>
+      </AppBar>
     )
   }
 }
@@ -45,3 +43,5 @@ export default class Header extends Component {
 Header.propTypes = {
   onRequestRouteChange: PropTypes.func.isRequired
 }
+
+export default withStyles(styles)(Header)
