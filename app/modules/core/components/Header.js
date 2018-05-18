@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
-import blue from '@material-ui/core/colors/blue'
 import MenuIcon from '@material-ui/icons/Menu'
 import { withStyles } from '@material-ui/core/styles'
 
